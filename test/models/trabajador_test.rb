@@ -11,6 +11,6 @@ class TrabajadorTest < ActiveSupport::TestCase
   end
  
   test 'trabajador has many operaciones' do
-      assert_includes @trabajador.operacions, operacions(:one)
+      assert_includes @trabajador.operacions, operacions(:operacion_one)
   end
 end

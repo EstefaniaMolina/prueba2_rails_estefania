@@ -4,8 +4,10 @@ one:
   numSerie: 1
   tamaño: 1
   descripcion: MyText
+  operacion: operacion_one
 
 two:
   numSerie: 1
   tamaño: 1
   descripcion: MyText
+  operacion: operacion_one
