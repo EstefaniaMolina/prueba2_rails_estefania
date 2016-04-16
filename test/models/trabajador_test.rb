@@ -1,11 +1,16 @@
 require 'test_helper'
 
 class TrabajadorTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
-  test 'trabajadors without name must be invalid' do
-  	trabajador = Trabajador.new nombre:nil
-  	assert_not trabajador.valid?
+  def setup
+      @trabajador = trabajadors(:trabajador_one)
+  end
+  
+  test 'trabajador without name must be invalid' do 
+      trabajador = Trabajador.new nombre:nil
+      assert_not trabajador.valid?
+  end
+ 
+  test 'trabajador has many operaciones' do
+      assert_includes @trabajador.operacions, operacions(:one)
   end
 end
